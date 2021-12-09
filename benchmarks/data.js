@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1639084260222,
+  "lastUpdate": 1639084264628,
   "repoUrl": "https://github.com/honeycombio/opentelemetry-python",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.6 - sdk": [
@@ -238,6 +238,46 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000004561535994720776",
             "extra": "mean: 51.29315489481792 usec\nrounds: 6456"
+          }
+        ]
+      }
+    ],
+    "OpenTelemetry Python Benchmarks - Python 3.7 - sdk": [
+      {
+        "commit": {
+          "author": {
+            "email": "ocelotl@users.noreply.github.com",
+            "name": "Diego Hurtado",
+            "username": "ocelotl"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": false,
+          "id": "9ef6829b23a6bc59154ed0c644c72833d0a0e46f",
+          "message": "Refactor Meter and MeterProvider (#2296)\n\n* Refactor Meter and MeterProvider\r\n\r\nFixes #2292\r\n\r\n* Remove synchronous instruments list\r\n\r\n* Undo changes to _time.py\r\n\r\n* Make lint pass\r\n\r\n* Remove unnecesary docstring\r\n\r\n* Remove _create_instrument\r\n\r\n* Add missing callback\r\n\r\n* Remove instrument creating methods from MeterProvider\r\n\r\n* Remove views and other attributes\r\n\r\n* Removed dataclass dependency\r\n\r\n* Add warning\r\n\r\n* Add export directory\r\n\r\n* Add missing callbacks",
+          "timestamp": "2021-12-08T15:09:07-06:00",
+          "tree_id": "48c8c14a37999be37abbb4950edf2aa4a38c5c57",
+          "url": "https://github.com/honeycombio/opentelemetry-python/commit/9ef6829b23a6bc59154ed0c644c72833d0a0e46f"
+        },
+        "date": 1639084263640,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "opentelemetry-sdk/tests/performance/benchmarks/trace/test_benchmark_trace.py::test_simple_start_span",
+            "value": 19895.620123628258,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000023615269583228824",
+            "extra": "mean: 50.26231873076372 usec\nrounds: 4223"
+          },
+          {
+            "name": "opentelemetry-sdk/tests/performance/benchmarks/trace/test_benchmark_trace.py::test_simple_start_as_current_span",
+            "value": 14579.316988361697,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00008929589590540212",
+            "extra": "mean: 68.59031879190739 usec\nrounds: 6258"
           }
         ]
       }
