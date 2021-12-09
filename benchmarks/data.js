@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1639084239957,
+  "lastUpdate": 1639084241149,
   "repoUrl": "https://github.com/honeycombio/opentelemetry-python",
   "entries": {
     "OpenTelemetry Python Benchmarks - Python 3.6 - sdk": [
@@ -78,6 +78,46 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0000024591856955241444",
             "extra": "mean: 4.112682941816048 usec\nrounds: 68489"
+          }
+        ]
+      }
+    ],
+    "OpenTelemetry Python Benchmarks - Python 3.6 - propagator": [
+      {
+        "commit": {
+          "author": {
+            "email": "ocelotl@users.noreply.github.com",
+            "name": "Diego Hurtado",
+            "username": "ocelotl"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": false,
+          "id": "9ef6829b23a6bc59154ed0c644c72833d0a0e46f",
+          "message": "Refactor Meter and MeterProvider (#2296)\n\n* Refactor Meter and MeterProvider\r\n\r\nFixes #2292\r\n\r\n* Remove synchronous instruments list\r\n\r\n* Undo changes to _time.py\r\n\r\n* Make lint pass\r\n\r\n* Remove unnecesary docstring\r\n\r\n* Remove _create_instrument\r\n\r\n* Add missing callback\r\n\r\n* Remove instrument creating methods from MeterProvider\r\n\r\n* Remove views and other attributes\r\n\r\n* Removed dataclass dependency\r\n\r\n* Add warning\r\n\r\n* Add export directory\r\n\r\n* Add missing callbacks",
+          "timestamp": "2021-12-08T15:09:07-06:00",
+          "tree_id": "48c8c14a37999be37abbb4950edf2aa4a38c5c57",
+          "url": "https://github.com/honeycombio/opentelemetry-python/commit/9ef6829b23a6bc59154ed0c644c72833d0a0e46f"
+        },
+        "date": 1639084240129,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "propagator/opentelemetry-propagator-b3/tests/performance/benchmarks/trace/propagation/test_benchmark_b3_format.py::test_extract_single_header",
+            "value": 80321.64191173803,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000033128686455179705",
+            "extra": "mean: 12.449944699821458 usec\nrounds: 10000"
+          },
+          {
+            "name": "propagator/opentelemetry-propagator-b3/tests/performance/benchmarks/trace/propagation/test_benchmark_b3_format.py::test_inject_empty_context",
+            "value": 153905.34554081288,
+            "unit": "iter/sec",
+            "range": "stddev: 9.547925202811952e-7",
+            "extra": "mean: 6.4975001127223235 usec\nrounds: 53192"
           }
         ]
       }
